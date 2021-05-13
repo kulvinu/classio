@@ -1,0 +1,14 @@
+.item-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+.item-container .title {
+    font-size: 28px;
+    margin-bottom: 25px;
+    text-align: center;
+  }
+.item-container .row {
+    display: flex;
+    justify-content: space-between;
+  }
