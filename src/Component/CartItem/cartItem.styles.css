@@ -1,0 +1,27 @@
+.cart-items {
+    width: 100%;
+    display: flex;
+    min-height: 100px;
+    border-bottom: 1px solid darkgrey;
+    padding: 15px 0;
+    font-size: 20px;
+    align-items: center;
+}
+.cart-items .image-container {
+    width: 23%;
+    padding-right: 15px;
+}
+.cart-items .image-container img {
+    width: 100%;
+    height: 100%;
+}
+.cart-items .name, .cart-items .quantity, .cart-items .price {
+    width: 23%;
+}
+.cart-items .quantity {
+    padding-left: 20px;
+}
+.cart-items .remove {
+    padding-left: 12px;
+    cursor: pointer;
+}

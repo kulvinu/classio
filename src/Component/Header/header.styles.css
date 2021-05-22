@@ -24,3 +24,12 @@
 .header .options .option {
     padding: 10px 15px;
 }
+.header .options .option .shopping-cart {
+    width: 45px;
+    height: 45px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
