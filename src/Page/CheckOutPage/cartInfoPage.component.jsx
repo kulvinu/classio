@@ -1,16 +1,19 @@
 import React,{useState,useEffect} from 'react';
+import { Link } from 'react-router-dom';
 import CartItem from '../../Component/CartItem/cartItem.component';
 import './cartInfoPage.styles.css';
 import axios from 'axios';
-
 
 const Cart = function(props){
     const userId = "u007";
     const [allItems,setItems] = useState();
     const [totalbill,setTotal] = useState();
+
     useEffect(() => {
         retriveCartItems();
     }, [])
+
+
     const retriveCartItems = ()=>{
         axios.get('http://localhost:5000/stock-api/cart/' + userId)
         .then((res)=>{
@@ -50,7 +53,7 @@ return(
                         
                     );
                 })
-            ):(<div>Stil loading ...</div>)
+            ):(<div>Still Loading</div>)
         }
         {console.log(allItems)}
         {
@@ -58,6 +61,10 @@ return(
                 <div className = 'bill'>TOTAL: Rs.{totalbill}</div>
             ):(<div>Stil loading ...</div>)
         }
+        <div >
+            <p></p>
+            <Link to={ {pathname: "/delivery"}} className="btn btn-primary">Proceed To Checkout</Link>
+        </div>
     </div>
 );
 }
